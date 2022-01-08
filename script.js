@@ -1,6 +1,23 @@
 function compute()
 {
     principal = document.getElementById("principal").value;
+
+
+if(principal<0)
+{
+alert("You must enter a positive value");
+return;
+
+}
+
+if(principal=="" || principal ==0)
+{
+alert("You must enter a positive value");
+return;
+
+}
+
+
 	rate = document.getElementById("rateInput").value;
 	years = document.getElementById("yearSelection").value;
     interest  = principal*rate*years/100;
