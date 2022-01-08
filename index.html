@@ -1,16 +1,60 @@
 <html>
-    <head>
+<head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+</head>
+<body >
+<div class="card">
+    <h1>Simple Interest Calculator</h1>
+    <div align="left">
+    <div>
+        <p>
+            <label style="margin-bottom:15px;"  >Amount</label>
+            <input  style="margin-bottom:15px;"  type="number" 
+                   id="principal">  
+            <br/>
+        </p>
+        <p>
+            <label style="margin-bottom:15px;" >Interest Rate</label>
+            <input style="margin-bottom:15px;"   type="range" 
+                   name="rangeInput"
+                   id="rateInput"
+                   step="0.1"
+                   value="0"
+                   min="0" 
+                   max="20" 
+                   class="slider" 
+                   onchange="updateSliderText(this.value);" >
+            <span  style="margin-bottom:15px;"  id="sliderSelectedValue">0%</span>
+        </p>
+        <p>
+            <label style="margin-bottom:15px;" >No. of Years</label>
+            <select  style="margin-bottom:15px;" name="hour" id="yearSelection">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> 
+       </p> 		
+     </div>
+    <button id = "submit"  
+            style="margin:10px 0;"
+		    onclick="compute();">Compute Interest</button>
+    <span style="display: table-row;" 
+          id="outputValue" > 
+     </span>
+    </div>
+    <br/>
+    <p  style="margin:35px;">&#169; Everyone Can Get Rich</p>
+    <br/>
+</div>
+</body>
 </html>
