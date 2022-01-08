@@ -33,18 +33,22 @@ p{
 
 label { 
     display: table-cell; 
+margin: 10px;
 }
 select{
 	display: table-cell;
+margin: 10px;
 }
 
 button {
 	font-size : 14px;
+	margin: 10px 0px;
 
 	}
 
 input {
 	display: table-cell;
+margin: 10px;
 	}
 
 img {
